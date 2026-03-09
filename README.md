@@ -6,6 +6,12 @@ Built as a practical project to explore LLM-as-judge evaluation patterns.
 
 ---
 
+## Live Demo
+
+**[ai-eval-toolkit.streamlit.app](https://ai-eval-toolkit.streamlit.app/)**
+
+---
+
 ## Features
 
 - **Single Evaluation** — Paste any source text and LLM output, get instant scores and hallucination analysis
@@ -14,12 +20,6 @@ Built as a practical project to explore LLM-as-judge evaluation patterns.
 - **Color-coded Results Table** — Red (1–2), yellow (3), green (4–5) accuracy scoring at a glance
 - **CSV Upload & Download** — Bring your own test cases and export all results
 - **Word Overlap Scoring** — Independent text-similarity metric alongside the LLM judge
-
----
-
-## Screenshots
-
-> _Screenshots coming soon_
 
 ---
 
