@@ -6,8 +6,15 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
+try:
+    import streamlit as st
+    api_key = st.secrets.get("ANTHROPIC_API_KEY") or os.getenv("ANTHROPIC_API_KEY")
+except Exception:
+    api_key = os.getenv("ANTHROPIC_API_KEY")
+
+
 def evaluate_with_llm(source_text, llm_output):
-    client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+    client = anthropic.Anthropic(api_key=api_key)
 
     response = client.messages.create(
         model="claude-opus-4-6",
