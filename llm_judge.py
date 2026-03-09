@@ -7,14 +7,26 @@ load_dotenv()
 
 
 def evaluate_with_llm(source_text, llm_output):
-    client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY_MAIN"])
+    client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
     response = client.messages.create(
         model="claude-opus-4-6",
         max_tokens=1024,
         system=(
             "You are an AI output evaluator. You compare LLM-generated text against "
-            "source documents and evaluate accuracy, completeness, and hallucination. "
+            "source documents and evaluate accuracy, completeness, and hallucination.\n\n"
+            "Hallucination rules:\n"
+            "- Mark has_hallucination as true ONLY when the LLM output contains a specific "
+            "fact, number, or claim that directly contradicts the source OR is entirely "
+            "absent from the source and cannot be inferred from it.\n"
+            "- Rephrasing, paraphrasing, or reasonable rounding (e.g. 'roughly 20,000' "
+            "when the source says '19,986') is NOT hallucination.\n"
+            "- Minor wording differences, synonyms, or restating the same fact differently "
+            "are NOT hallucination.\n"
+            "- Adding well-known context that does not contradict the source is NOT "
+            "hallucination.\n"
+            "- Only fabricated numbers, invented statistics, or claims that contradict "
+            "the source should be flagged.\n\n"
             "Always respond with valid JSON only, no markdown or extra text."
         ),
         messages=[

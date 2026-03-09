@@ -1,0 +1,154 @@
+[
+  {
+    "case_id": 1,
+    "question": "What was Salesforce's total revenue and YoY growth rate in FY2024?",
+    "expected_answer": "Salesforce reported total revenue of $34.9 billion in FY2024, representing 11% year-over-year growth compared to $31.4 billion in FY2023.",
+    "llm_answer": "Salesforce achieved record revenue of $38.2 billion in FY2024, driven by strong cloud adoption, reflecting approximately 14% year-over-year growth as the company continued to expand its enterprise customer base.",
+    "llm_judge": {
+      "accuracy_score": 1,
+      "completeness_score": 1,
+      "has_hallucination": true,
+      "hallucination_details": "The LLM output states Salesforce achieved $38.2 billion in FY2024 revenue with approximately 14% year-over-year growth. The source document states total revenue was $34.9 billion with 11% year-over-year growth. Both the revenue figure and the growth rate are fabricated and directly contradict the source.",
+      "reasoning": "The LLM output contains critically incorrect numbers: $38.2 billion instead of $34.9 billion for FY2024 revenue, and 14% instead of 11% for year-over-year growth. These are not minor rounding differences but significant fabrications that contradict the source. Additionally, claims about 'strong cloud adoption' and 'expanding enterprise customer base' are not supported by the source document. The output fails on both accuracy and completeness since the core facts are wrong."
+    },
+    "text_similarity": {
+      "source_words": 17,
+      "llm_words": 29,
+      "common_words": 9,
+      "overlap_percentage": 52.9
+    }
+  },
+  {
+    "case_id": 2,
+    "question": "What is McKinsey's reported figure for the potential economic impact of generative AI?",
+    "expected_answer": "McKinsey Global Institute estimates generative AI could add $2.6 to $4.4 trillion annually to the global economy across 63 analyzed use cases.",
+    "llm_answer": "According to McKinsey Global Institute, generative AI has the potential to contribute between $2.6 and $4.4 trillion annually to global GDP across the use cases analyzed in their research.",
+    "llm_judge": {
+      "accuracy_score": 4,
+      "completeness_score": 4,
+      "has_hallucination": false,
+      "hallucination_details": "None",
+      "reasoning": "The LLM output accurately conveys the key figures ($2.6 to $4.4 trillion annually) and attributes them to McKinsey Global Institute. It says 'global GDP' instead of 'global economy,' which is a minor wording difference but not a hallucination since adding to the global economy and contributing to global GDP are closely related concepts. The output omits the specific detail of '63 analyzed use cases,' instead using the vaguer 'the use cases analyzed in their research,' which slightly reduces completeness but does not introduce false information."
+    },
+    "text_similarity": {
+      "source_words": 20,
+      "llm_words": 25,
+      "common_words": 13,
+      "overlap_percentage": 65.0
+    }
+  },
+  {
+    "case_id": 3,
+    "question": "What percentage of S&P 500 companies mentioned AI in their Q1 2024 earnings calls?",
+    "expected_answer": "According to FactSet, 35% of S&P 500 companies cited AI on their Q1 2024 earnings calls, the highest proportion on record.",
+    "llm_answer": "A significant majority of S&P 500 companies \u00e2\u20ac\u201d roughly 72% \u00e2\u20ac\u201d referenced artificial intelligence during their Q1 2024 earnings calls, reflecting the technology's growing strategic importance across sectors.",
+    "llm_judge": {
+      "accuracy_score": 1,
+      "completeness_score": 2,
+      "has_hallucination": true,
+      "hallucination_details": "The LLM claims 'roughly 72%' of S&P 500 companies referenced AI on Q1 2024 earnings calls, while the source document states the figure is 35%. This is a fabricated number that directly contradicts the source.",
+      "reasoning": "The core statistic is drastically wrong: 72% vs. the actual 35%. This more than doubles the real figure and fundamentally misrepresents the data. The LLM does correctly identify the time period (Q1 2024) and the general topic (AI mentions on earnings calls), but the key factual claim is a clear hallucination. It also omits that this was the highest proportion on record, though it does note 'growing strategic importance' which loosely gestures at the same idea."
+    },
+    "text_similarity": {
+      "source_words": 20,
+      "llm_words": 27,
+      "common_words": 10,
+      "overlap_percentage": 50.0
+    }
+  },
+  {
+    "case_id": 4,
+    "question": "What was Amazon Web Services' revenue and operating income in full-year 2023?",
+    "expected_answer": "AWS generated $90.8 billion in revenue and $22.4 billion in operating income in full-year 2023, with an operating margin of approximately 24.7%.",
+    "llm_answer": "Amazon Web Services posted revenue of approximately $91 billion in 2023 with operating income of around $22 billion, maintaining strong profitability as the company's highest-margin segment.",
+    "llm_judge": {
+      "accuracy_score": 4,
+      "completeness_score": 3,
+      "has_hallucination": false,
+      "hallucination_details": "None",
+      "reasoning": "The revenue figure of 'approximately $91 billion' is a reasonable rounding of $90.8 billion. The operating income of 'around $22 billion' is a reasonable rounding of $22.4 billion. The claim that AWS is 'the company's highest-margin segment' is not stated in the source, but this is well-known context about Amazon and does not contradict anything in the source. The output omits the specific operating margin figure of 24.7%. Completeness is reduced because the exact figures and the operating margin are not included."
+    },
+    "text_similarity": {
+      "source_words": 18,
+      "llm_words": 25,
+      "common_words": 8,
+      "overlap_percentage": 44.4
+    }
+  },
+  {
+    "case_id": 5,
+    "question": "What was the global enterprise software market size in 2023 and projected CAGR through 2028?",
+    "expected_answer": "The global enterprise software market was valued at approximately $232 billion in 2023 and is projected to grow at a CAGR of 11.5% through 2028.",
+    "llm_answer": "The global enterprise software market reached approximately $250 billion in 2023 and is forecast to expand at a compound annual growth rate of 11.5% over the next five years, driven by cloud migration and digital transformation initiatives.",
+    "llm_judge": {
+      "accuracy_score": 2,
+      "completeness_score": 3,
+      "has_hallucination": true,
+      "hallucination_details": "The source states the market was valued at approximately $232 billion in 2023, but the LLM output claims it reached approximately $250 billion \u2014 an $18 billion discrepancy that is not a minor rounding difference. Additionally, the claim that growth is 'driven by cloud migration and digital transformation initiatives' is not mentioned in the source and cannot be directly inferred from it.",
+      "reasoning": "The CAGR of 11.5% and the time horizon are correctly stated. However, the market valuation is significantly inflated ($250B vs $232B), which constitutes a factual error/hallucination. The drivers mentioned (cloud migration and digital transformation) are fabricated relative to the source. Completeness is moderate because the core statistics are partially conveyed, but the key valuation figure is wrong."
+    },
+    "text_similarity": {
+      "source_words": 24,
+      "llm_words": 35,
+      "common_words": 16,
+      "overlap_percentage": 66.7
+    }
+  },
+  {
+    "case_id": 6,
+    "question": "What cost savings did JPMorgan Chase report from AI and automation initiatives in 2023?",
+    "expected_answer": "JPMorgan Chase reported approximately $1.5 billion in business value from AI and machine learning use cases in 2023, spanning risk management, fraud detection, and customer service automation.",
+    "llm_answer": "JPMorgan Chase disclosed that its AI initiatives delivered roughly $1.5 billion in business value in 2023, with applications spanning fraud detection, risk management, and customer-facing automation workflows.",
+    "llm_judge": {
+      "accuracy_score": 5,
+      "completeness_score": 5,
+      "has_hallucination": false,
+      "hallucination_details": "None",
+      "reasoning": "The LLM output accurately conveys all key facts from the source: the $1.5 billion figure, the 2023 timeframe, and the application areas. 'Customer service automation' is rephrased as 'customer-facing automation workflows,' which is a reasonable paraphrase. 'Disclosed' vs 'reported' and 'AI initiatives' vs 'AI and machine learning use cases' are acceptable synonymous restatements. No facts are fabricated or contradicted."
+    },
+    "text_similarity": {
+      "source_words": 25,
+      "llm_words": 26,
+      "common_words": 15,
+      "overlap_percentage": 60.0
+    }
+  },
+  {
+    "case_id": 7,
+    "question": "What was Microsoft's cloud revenue (Intelligent Cloud segment) in Q2 FY2024?",
+    "expected_answer": "Microsoft's Intelligent Cloud segment reported revenue of $25.9 billion in Q2 FY2024, up 21% year-over-year, with Azure growing approximately 28%.",
+    "llm_answer": "Microsoft's Intelligent Cloud division generated $25.9 billion in revenue during Q2 FY2024, reflecting 21% year-over-year growth. Azure cloud services grew by 28%, driven by continued enterprise adoption and AI infrastructure demand.",
+    "llm_judge": {
+      "accuracy_score": 4,
+      "completeness_score": 5,
+      "has_hallucination": true,
+      "hallucination_details": "The source says Azure grew 'approximately 28%', while the output states exactly '28%', which is a minor difference. More importantly, the phrase 'driven by continued enterprise adoption and AI infrastructure demand' is entirely fabricated \u2014 this reasoning is not mentioned or implied in the source document.",
+      "reasoning": "The core financial figures are accurately reported: $25.9 billion revenue, 21% YoY growth, and ~28% Azure growth. However, the LLM added a causal explanation ('driven by continued enterprise adoption and AI infrastructure demand') that is not present in the source document. While this may be plausible general knowledge, it constitutes a hallucination since it presents specific drivers as fact without source support. The completeness score is 5 because all information from the source is covered."
+    },
+    "text_similarity": {
+      "source_words": 20,
+      "llm_words": 29,
+      "common_words": 11,
+      "overlap_percentage": 55.0
+    }
+  },
+  {
+    "case_id": 8,
+    "question": "What workforce reduction did Google announce in January 2024 and which division was most affected?",
+    "expected_answer": "Google announced layoffs of approximately 1,000 employees in January 2024, primarily affecting its hardware and engineering teams including the Pixel and Nest divisions.",
+    "llm_answer": "In January 2024, Google announced a major restructuring affecting over 12,000 employees globally, with the advertising and search divisions bearing the largest cuts as the company pivoted resources toward AI development.",
+    "llm_judge": {
+      "accuracy_score": 1,
+      "completeness_score": 1,
+      "has_hallucination": true,
+      "hallucination_details": "The LLM output fabricates multiple facts: it states over 12,000 employees were affected (source says approximately 1,000), claims the advertising and search divisions bore the largest cuts (source says hardware and engineering teams including Pixel and Nest), and adds an unsupported claim about pivoting resources toward AI development.",
+      "reasoning": "Nearly every specific claim in the LLM output contradicts the source document. The number of employees is inflated by more than 10x, the affected divisions are entirely different, and the stated reason for the restructuring is fabricated. The only accurate element is that Google announced layoffs in January 2024."
+    },
+    "text_similarity": {
+      "source_words": 22,
+      "llm_words": 29,
+      "common_words": 9,
+      "overlap_percentage": 40.9
+    }
+  }
+]
