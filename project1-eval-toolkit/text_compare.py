@@ -12,25 +12,26 @@ def compare_texts(source, llm_output):
     }
 
 
-examples = [
-    (
-        "Dollar General revenue was 38.7 billion in FY2023",
-        "Dollar General's revenue reached approximately 42 billion in FY2023"
-    ),
-    (
-        "Todd Vasos is the CEO",
-        "Todd Vasos serves as CEO"
-    ),
-    (
-        "19,986 stores across 47 states",
-        "The company operates roughly 20,000 retail locations nationwide"
-    )
-]
+if __name__ == "__main__":
+    examples = [
+        (
+            "Dollar General revenue was 38.7 billion in FY2023",
+            "Dollar General's revenue reached approximately 42 billion in FY2023"
+        ),
+        (
+            "Todd Vasos is the CEO",
+            "Todd Vasos serves as CEO"
+        ),
+        (
+            "19,986 stores across 47 states",
+            "The company operates roughly 20,000 retail locations nationwide"
+        )
+    ]
 
-for i, (source, llm_output) in enumerate(examples, 1):
-    result = compare_texts(source, llm_output)
-    print(f"Example {i}:")
-    print(f"  Source:  {source}")
-    print(f"  LLM:     {llm_output}")
-    print(f"  Result:  {result}")
-    print()
+    for i, (source, llm_output) in enumerate(examples, 1):
+        result = compare_texts(source, llm_output)
+        print(f"Example {i}:")
+        print(f"  Source:  {source}")
+        print(f"  LLM:     {llm_output}")
+        print(f"  Result:  {result}")
+        print()
