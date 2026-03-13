@@ -1,58 +1,37 @@
 [
   {
-    "question": "What was Salesforce's total revenue and YoY growth rate in FY2024?",
-    "expected_answer": "Salesforce reported total revenue of $34.9 billion in FY2024, representing 11% year-over-year growth compared to $31.4 billion in FY2023.",
-    "llm_answer": "Salesforce achieved record revenue of $38.2 billion in FY2024, driven by strong cloud adoption, reflecting approximately 14% year-over-year growth as the company continued to expand its enterprise customer base.",
-    "expected_accuracy": 1,
+    "question": "What year was the Eiffel Tower built?",
+    "expected_answer": "The Eiffel Tower was completed in 1889.",
+    "llm_answer": "The Eiffel Tower was completed in 1887.",
+    "accuracy_score": 2,
     "has_hallucination": true
   },
   {
-    "question": "What is McKinsey's reported figure for the potential economic impact of generative AI?",
-    "expected_answer": "McKinsey Global Institute estimates generative AI could add $2.6 to $4.4 trillion annually to the global economy across 63 analyzed use cases.",
-    "llm_answer": "According to McKinsey Global Institute, generative AI has the potential to contribute between $2.6 and $4.4 trillion annually to global GDP across the use cases analyzed in their research.",
-    "expected_accuracy": 5,
-    "has_hallucination": false
-  },
-  {
-    "question": "What percentage of S&P 500 companies mentioned AI in their Q1 2024 earnings calls?",
-    "expected_answer": "According to FactSet, 35% of S&P 500 companies cited AI on their Q1 2024 earnings calls, the highest proportion on record.",
-    "llm_answer": "A significant majority of S&P 500 companies — roughly 72% — referenced artificial intelligence during their Q1 2024 earnings calls, reflecting the technology's growing strategic importance across sectors.",
-    "expected_accuracy": 1,
+    "question": "What is the capital of Australia?",
+    "expected_answer": "The capital of Australia is Canberra.",
+    "llm_answer": "The capital of Australia is Sydney.",
+    "accuracy_score": 1,
     "has_hallucination": true
   },
   {
-    "question": "What was Amazon Web Services' revenue and operating income in full-year 2023?",
-    "expected_answer": "AWS generated $90.8 billion in revenue and $22.4 billion in operating income in full-year 2023, with an operating margin of approximately 24.7%.",
-    "llm_answer": "Amazon Web Services posted revenue of approximately $91 billion in 2023 with operating income of around $22 billion, maintaining strong profitability as the company's highest-margin segment.",
-    "expected_accuracy": 4,
+    "question": "What is the boiling point of water at sea level?",
+    "expected_answer": "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level.",
+    "llm_answer": "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level.",
+    "accuracy_score": 5,
     "has_hallucination": false
   },
   {
-    "question": "What was the global enterprise software market size in 2023 and projected CAGR through 2028?",
-    "expected_answer": "The global enterprise software market was valued at approximately $232 billion in 2023 and is projected to grow at a CAGR of 11.5% through 2028.",
-    "llm_answer": "The global enterprise software market reached approximately $250 billion in 2023 and is forecast to expand at a compound annual growth rate of 11.5% over the next five years, driven by cloud migration and digital transformation initiatives.",
-    "expected_accuracy": 3,
+    "question": "Who wrote the novel '1984'?",
+    "expected_answer": "1984 was written by George Orwell.",
+    "llm_answer": "1984 was written by George Orwell, published in 1949.",
+    "accuracy_score": 5,
     "has_hallucination": false
   },
   {
-    "question": "What cost savings did JPMorgan Chase report from AI and automation initiatives in 2023?",
-    "expected_answer": "JPMorgan Chase reported approximately $1.5 billion in business value from AI and machine learning use cases in 2023, spanning risk management, fraud detection, and customer service automation.",
-    "llm_answer": "JPMorgan Chase disclosed that its AI initiatives delivered roughly $1.5 billion in business value in 2023, with applications spanning fraud detection, risk management, and customer-facing automation workflows.",
-    "expected_accuracy": 5,
+    "question": "How many bones are in the adult human body?",
+    "expected_answer": "An adult human body has 206 bones.",
+    "llm_answer": "An adult human body has 206 bones.",
+    "accuracy_score": 5,
     "has_hallucination": false
-  },
-  {
-    "question": "What was Microsoft's cloud revenue (Intelligent Cloud segment) in Q2 FY2024?",
-    "expected_answer": "Microsoft's Intelligent Cloud segment reported revenue of $25.9 billion in Q2 FY2024, up 21% year-over-year, with Azure growing approximately 28%.",
-    "llm_answer": "Microsoft's Intelligent Cloud division generated $25.9 billion in revenue during Q2 FY2024, reflecting 21% year-over-year growth. Azure cloud services grew by 28%, driven by continued enterprise adoption and AI infrastructure demand.",
-    "expected_accuracy": 5,
-    "has_hallucination": false
-  },
-  {
-    "question": "What workforce reduction did Google announce in January 2024 and which division was most affected?",
-    "expected_answer": "Google announced layoffs of approximately 1,000 employees in January 2024, primarily affecting its hardware and engineering teams including the Pixel and Nest divisions.",
-    "llm_answer": "In January 2024, Google announced a major restructuring affecting over 12,000 employees globally, with the advertising and search divisions bearing the largest cuts as the company pivoted resources toward AI development.",
-    "expected_accuracy": 1,
-    "has_hallucination": true
   }
 ]

@@ -6,10 +6,10 @@
     "llm_answer": "Salesforce achieved record revenue of $38.2 billion in FY2024, driven by strong cloud adoption, reflecting approximately 14% year-over-year growth as the company continued to expand its enterprise customer base.",
     "llm_judge": {
       "accuracy_score": 1,
-      "completeness_score": 1,
+      "completeness_score": 2,
       "has_hallucination": true,
-      "hallucination_details": "The LLM output states Salesforce achieved $38.2 billion in FY2024 revenue with approximately 14% year-over-year growth. The source document states total revenue was $34.9 billion with 11% year-over-year growth. Both the revenue figure and the growth rate are fabricated and directly contradict the source.",
-      "reasoning": "The LLM output contains critically incorrect numbers: $38.2 billion instead of $34.9 billion for FY2024 revenue, and 14% instead of 11% for year-over-year growth. These are not minor rounding differences but significant fabrications that contradict the source. Additionally, claims about 'strong cloud adoption' and 'expanding enterprise customer base' are not supported by the source document. The output fails on both accuracy and completeness since the core facts are wrong."
+      "hallucination_details": "The LLM output states Salesforce achieved revenue of $38.2 billion in FY2024 with approximately 14% year-over-year growth. The source document clearly states total revenue was $34.9 billion with 11% year-over-year growth. Both the revenue figure and the growth rate are fabricated/incorrect.",
+      "reasoning": "The LLM output contains two critical factual errors: the revenue figure ($38.2 billion vs. the actual $34.9 billion) and the growth rate (14% vs. 11%). These are not minor rounding differences but significant fabrications that misrepresent the company's financial performance. The output also adds unsupported claims about 'strong cloud adoption' and 'expanding enterprise customer base' that are not in the source. The completeness score is a 2 because it does mention FY2024 revenue and year-over-year growth (the right topics) but with entirely wrong numbers, and it omits the FY2023 comparison figure of $31.4 billion."
     },
     "text_similarity": {
       "source_words": 17,
@@ -28,7 +28,7 @@
       "completeness_score": 4,
       "has_hallucination": false,
       "hallucination_details": "None",
-      "reasoning": "The LLM output accurately conveys the key figures ($2.6 to $4.4 trillion annually) and attributes them to McKinsey Global Institute. It says 'global GDP' instead of 'global economy,' which is a minor wording difference but not a hallucination since adding to the global economy and contributing to global GDP are closely related concepts. The output omits the specific detail of '63 analyzed use cases,' instead using the vaguer 'the use cases analyzed in their research,' which slightly reduces completeness but does not introduce false information."
+      "reasoning": "The LLM output accurately captures the key figures ($2.6 to $4.4 trillion annually) and attributes them to McKinsey Global Institute. It says 'global GDP' instead of 'global economy,' which is a minor difference but not a hallucination since adding to the global economy and contributing to global GDP are closely related concepts. The output omits the specific detail of '63 analyzed use cases,' instead using the vaguer 'use cases analyzed in their research,' which slightly reduces completeness but doesn't introduce false information."
     },
     "text_similarity": {
       "source_words": 20,
@@ -44,10 +44,10 @@
     "llm_answer": "A significant majority of S&P 500 companies \u00e2\u20ac\u201d roughly 72% \u00e2\u20ac\u201d referenced artificial intelligence during their Q1 2024 earnings calls, reflecting the technology's growing strategic importance across sectors.",
     "llm_judge": {
       "accuracy_score": 1,
-      "completeness_score": 2,
+      "completeness_score": 1,
       "has_hallucination": true,
-      "hallucination_details": "The LLM claims 'roughly 72%' of S&P 500 companies referenced AI on Q1 2024 earnings calls, while the source document states the figure is 35%. This is a fabricated number that directly contradicts the source.",
-      "reasoning": "The core statistic is drastically wrong: 72% vs. the actual 35%. This more than doubles the real figure and fundamentally misrepresents the data. The LLM does correctly identify the time period (Q1 2024) and the general topic (AI mentions on earnings calls), but the key factual claim is a clear hallucination. It also omits that this was the highest proportion on record, though it does note 'growing strategic importance' which loosely gestures at the same idea."
+      "hallucination_details": "The LLM output claims 'roughly 72%' of S&P 500 companies referenced AI on their Q1 2024 earnings calls, while the source document states the figure was 35%. This is a fabricated number that more than doubles the actual percentage.",
+      "reasoning": "The core factual claim in the LLM output is drastically wrong. The source says 35% of S&P 500 companies cited AI on Q1 2024 earnings calls, but the LLM states 'roughly 72%'. Additionally, the LLM describes this as a 'significant majority,' which is misleading given the actual figure. The characterization of it being 'the highest proportion on record' from the source is omitted. The accuracy and completeness scores are both minimal due to this major factual error."
     },
     "text_similarity": {
       "source_words": 20,
@@ -66,7 +66,7 @@
       "completeness_score": 3,
       "has_hallucination": false,
       "hallucination_details": "None",
-      "reasoning": "The revenue figure of 'approximately $91 billion' is a reasonable rounding of $90.8 billion. The operating income of 'around $22 billion' is a reasonable rounding of $22.4 billion. The claim that AWS is 'the company's highest-margin segment' is not stated in the source, but this is well-known context about Amazon and does not contradict anything in the source. The output omits the specific operating margin figure of 24.7%. Completeness is reduced because the exact figures and the operating margin are not included."
+      "reasoning": "The revenue figure of 'approximately $91 billion' is a reasonable rounding of $90.8 billion, and 'around $22 billion' is a reasonable rounding of $22.4 billion. The claim about being 'the company's highest-margin segment' is not in the source but is well-known general knowledge about Amazon and does not contradict the source. The output omits the specific operating margin of 24.7%. The rounding of $22.4B to $22B is slightly loose but within acceptable bounds for 'around.' Completeness is docked because the operating margin figure is missing."
     },
     "text_similarity": {
       "source_words": 18,
@@ -84,8 +84,8 @@
       "accuracy_score": 2,
       "completeness_score": 3,
       "has_hallucination": true,
-      "hallucination_details": "The source states the market was valued at approximately $232 billion in 2023, but the LLM output claims it reached approximately $250 billion \u2014 an $18 billion discrepancy that is not a minor rounding difference. Additionally, the claim that growth is 'driven by cloud migration and digital transformation initiatives' is not mentioned in the source and cannot be directly inferred from it.",
-      "reasoning": "The CAGR of 11.5% and the time horizon are correctly stated. However, the market valuation is significantly inflated ($250B vs $232B), which constitutes a factual error/hallucination. The drivers mentioned (cloud migration and digital transformation) are fabricated relative to the source. Completeness is moderate because the core statistics are partially conveyed, but the key valuation figure is wrong."
+      "hallucination_details": "The LLM states the market was valued at approximately $250 billion in 2023, while the source document states it was approximately $232 billion. This is an $18 billion discrepancy, which is a significant fabrication/distortion of the actual figure. Additionally, the claim that growth is 'driven by cloud migration and digital transformation initiatives' is not mentioned in the source and represents added information not inferable from the source.",
+      "reasoning": "The CAGR of 11.5% and the timeframe are correctly stated. However, the market valuation is significantly inflated ($250B vs $232B), which is not a minor rounding difference but a substantial misstatement of a key figure. The drivers mentioned (cloud migration and digital transformation) are not present in the source document. While the completeness of the core facts (market size, CAGR, timeframe) is mostly covered, the inaccuracy of the primary valuation figure significantly undermines the output's reliability."
     },
     "text_similarity": {
       "source_words": 24,
@@ -104,7 +104,7 @@
       "completeness_score": 5,
       "has_hallucination": false,
       "hallucination_details": "None",
-      "reasoning": "The LLM output accurately conveys all key facts from the source: the $1.5 billion figure, the 2023 timeframe, and the application areas. 'Customer service automation' is rephrased as 'customer-facing automation workflows,' which is a reasonable paraphrase. 'Disclosed' vs 'reported' and 'AI initiatives' vs 'AI and machine learning use cases' are acceptable synonymous restatements. No facts are fabricated or contradicted."
+      "reasoning": "The LLM output accurately captures all key facts from the source: the $1.5 billion figure, the 2023 timeframe, and the three application areas (fraud detection, risk management, and customer service automation). 'Customer-facing automation workflows' is a reasonable paraphrase of 'customer service automation,' and 'disclosed' vs 'reported' is a synonym. The order of the listed applications differs but that is inconsequential. No fabricated or contradictory information is present."
     },
     "text_similarity": {
       "source_words": 25,
@@ -122,8 +122,8 @@
       "accuracy_score": 4,
       "completeness_score": 5,
       "has_hallucination": true,
-      "hallucination_details": "The source says Azure grew 'approximately 28%', while the output states exactly '28%', which is a minor difference. More importantly, the phrase 'driven by continued enterprise adoption and AI infrastructure demand' is entirely fabricated \u2014 this reasoning is not mentioned or implied in the source document.",
-      "reasoning": "The core financial figures are accurately reported: $25.9 billion revenue, 21% YoY growth, and ~28% Azure growth. However, the LLM added a causal explanation ('driven by continued enterprise adoption and AI infrastructure demand') that is not present in the source document. While this may be plausible general knowledge, it constitutes a hallucination since it presents specific drivers as fact without source support. The completeness score is 5 because all information from the source is covered."
+      "hallucination_details": "The source says Azure grew 'approximately 28%', while the output states exactly '28%' \u2014 this is a minor difference but acceptable. However, the claim that Azure growth was 'driven by continued enterprise adoption and AI infrastructure demand' is not present in the source document and is fabricated detail.",
+      "reasoning": "The core financial figures are accurately reported: $25.9 billion revenue, 21% YoY growth, and ~28% Azure growth. However, the output adds a causal explanation ('driven by continued enterprise adoption and AI infrastructure demand') that does not appear in the source document. This constitutes a hallucination as it introduces specific claims about the drivers of growth that cannot be inferred from the source. Completeness is high as all key data points from the source are covered."
     },
     "text_similarity": {
       "source_words": 20,
@@ -141,8 +141,8 @@
       "accuracy_score": 1,
       "completeness_score": 1,
       "has_hallucination": true,
-      "hallucination_details": "The LLM output fabricates multiple facts: it states over 12,000 employees were affected (source says approximately 1,000), claims the advertising and search divisions bore the largest cuts (source says hardware and engineering teams including Pixel and Nest), and adds an unsupported claim about pivoting resources toward AI development.",
-      "reasoning": "Nearly every specific claim in the LLM output contradicts the source document. The number of employees is inflated by more than 10x, the affected divisions are entirely different, and the stated reason for the restructuring is fabricated. The only accurate element is that Google announced layoffs in January 2024."
+      "hallucination_details": "Multiple fabricated claims: (1) The number of affected employees is stated as 'over 12,000' when the source says approximately 1,000. (2) The divisions affected are stated as 'advertising and search divisions' when the source says hardware and engineering teams including Pixel and Nest. (3) The characterization as a 'major restructuring' and the claim about 'pivoting resources toward AI development' are not supported by the source.",
+      "reasoning": "The LLM output contradicts the source document on nearly every factual detail. The number of employees is inflated by more than 10x (12,000 vs. 1,000), the affected divisions are entirely wrong (advertising and search vs. hardware/engineering/Pixel/Nest), and the stated reason (AI pivot) is fabricated. Only the date (January 2024) and the company (Google) are correct."
     },
     "text_similarity": {
       "source_words": 22,
