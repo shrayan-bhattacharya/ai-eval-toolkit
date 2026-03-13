@@ -20,6 +20,7 @@ def create_vector_store(
     source_name: str = "document",
     chunk_size: int = 500,
     chunk_overlap: int = 50,
+    db_path: str = None,
 ):
     """
     Chunk text, embed each chunk, and store in a local ChromaDB collection.
@@ -37,8 +38,9 @@ def create_vector_store(
     chunks = chunk_text(text, chunk_size=chunk_size, overlap=chunk_overlap)
     print(f"Chunked into {len(chunks)} pieces.")
 
-    # 2. Create persistent ChromaDB client (stored in ./chroma_db)
-    db_path = os.path.join(os.path.dirname(__file__), "chroma_db")
+    # 2. Create persistent ChromaDB client
+    if db_path is None:
+        db_path = os.path.join(os.path.dirname(__file__), "chroma_db")
     client = chromadb.PersistentClient(path=db_path)
 
     # 3. Drop existing collection to avoid duplicates, then recreate
