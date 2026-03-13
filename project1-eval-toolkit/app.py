@@ -279,7 +279,7 @@ with tab_batch:
 
             styled = (
                 display_df.style
-                .applymap(color_accuracy_str, subset=["Accuracy"])
+                .map(color_accuracy_str, subset=["Accuracy"])
                 .set_properties(subset=["Question"], **{"min-width": "280px"})
             )
             st.dataframe(styled, use_container_width=True, hide_index=True)

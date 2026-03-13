@@ -1,7 +1,0 @@
-streamlit
-chromadb
-anthropic
-python-dotenv
-pdfplumber
-python-docx
-openpyxl
