@@ -6,6 +6,8 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "project1-eval-toolkit"))
 
 import streamlit as st
+import pdfplumber
+import io
 from dotenv import load_dotenv
 
 # ── API key: st.secrets first, then .env ─────────────────────────────────────
@@ -49,11 +51,17 @@ if "history" not in st.session_state:
 with st.sidebar:
     st.title("Document Upload")
 
-    uploaded_file = st.file_uploader("Upload a .txt file", type=["txt"])
+    uploaded_file = st.file_uploader("Upload a .txt or .pdf file", type=["txt", "pdf"])
 
     if uploaded_file:
-        doc_text = uploaded_file.read().decode("utf-8")
-        st.success(f"Loaded file: {uploaded_file.name}")
+        if uploaded_file.name.endswith(".pdf"):
+            with pdfplumber.open(io.BytesIO(uploaded_file.read())) as pdf:
+                pages = [page.extract_text() or "" for page in pdf.pages]
+            doc_text = "\n".join(pages)
+            st.success(f"Extracted {len(pages)} pages from {uploaded_file.name}")
+        else:
+            doc_text = uploaded_file.read().decode("utf-8")
+            st.success(f"Loaded {len(doc_text):,} characters from {uploaded_file.name}")
     else:
         doc_text = st.text_area(
             "Or paste document text below:",
